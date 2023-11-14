@@ -1,10 +1,12 @@
-import React from 'react';
-import { Heading } from '@chakra-ui/react'
+import React from "react";
+import { Heading } from "@chakra-ui/react";
 
-const Title = ({ title, as=null, size=null }) => {
+const Title = () => {
   return (
-    <Heading >{title}</Heading>
-  )
-}
+    <Heading as="h2" size="3xl" noOfLines={1}>
+      Property Data
+    </Heading>
+  );
+};
 
-export default Title
+export default Title;

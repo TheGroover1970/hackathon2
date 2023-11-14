@@ -22,7 +22,7 @@ const Header = () => {
     >
       <Box p="2">
         <Heading as="h1" size="lg" color="white">
-          Your Logo
+          Halifax
         </Heading>
       </Box>
       <Spacer />
