@@ -1,5 +1,8 @@
 # Backend:
+Get property evaluation by uprn
 https://jubilant-zebra-rq57wq76xgx3pw66-5000.app.github.dev/evaluateproperty/48028039
+Get addresses by postcode:
+https://jubilant-zebra-rq57wq76xgx3pw66-5000.app.github.dev/getaddresses/SR3%202RQ
 
 # Getting Started with Create React App
 

@@ -1,11 +1,16 @@
 from flask import Flask
-import get_warnings, json
+import get_warnings, postcode, json
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
     return "Working"
+
+@app.route('/getaddresses/<pc>')
+def get_addresses(pc):
+    print(pc)
+    return json.dumps(postcode.get_addresses(pc))
 
 @app.route('/evaluateproperty/<uprn>')
 def property_warnings(uprn):
