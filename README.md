@@ -1,3 +1,9 @@
+# Backend:
+Get property evaluation by uprn
+https://jubilant-zebra-rq57wq76xgx3pw66-5000.app.github.dev/evaluateproperty/48028039
+Get addresses by postcode:
+https://jubilant-zebra-rq57wq76xgx3pw66-5000.app.github.dev/getaddresses/SR3%202RQ
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +74,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+####
+chatbot
+<!DOCTYPE html><html><body><iframe src="https://web.powerva.microsoft.com/environments/Default-20703943-202c-4611-b2d3-e2f73d3b0046/bots/cr5fb_copilot1/webchat?__version__=2" frameborder="0" style="width: 100%; height: 100%;"></iframe></body></html>
