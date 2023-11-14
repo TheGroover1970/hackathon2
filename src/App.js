@@ -1,13 +1,9 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
-const { CosmosClient } = require("@azure/cosmos");
+import ContainerWrapper from './Components/ContainerWrapper';
+import Title from './Components/Title';
+const { CosmosClient } = require("@azure/cosmos"); 
 
-const endpoint = 'https://hackdatadb.documents.azure.com:443/';
-const key = 'URcAzX4mV8kxjGRpfQAzQ5HrSh6T0dTxGrKxqpFLOcurFuBDIdylh3AfCNk6LLZ7H6XsMaubGII2ACDbO8J81Q==';
-
-const client = new CosmosClient({ endpoint, key });
-const database = client.database('inspectionData');
-const container = database.container('Items');
 
 function App() {
 
@@ -16,6 +12,11 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
+        const endpoint = 'https://hackdatadb.documents.azure.com:443/';
+        const key = 'XnzdHzA2ntyqvqTUC5QQnwvRaAHWVXzTSpKdmhK7p7hjSszwYbej7n2Ul4XcnmoRjV2vbuwW7E9uACDbmScWIA==';
+        const client = new CosmosClient({ endpoint, key });
+        const database = client.database('inspectionData');
+        const container = database.container('Items');
         // Define the query
         const querySpec = {
           query: 'SELECT * from c WHERE c["Property Address"] like "%Mitcham%"',
@@ -39,21 +40,21 @@ function App() {
   
 console.log(data);
   return (
-    <div>
-    <h1>Data from Cosmos DB</h1>
-    {data.length > 0 ? (
-      <ul>
-        {data.map((item) => (
-          <li key={item.id}>
-            <strong>Property Address:</strong> {item['Property Address']}
-          </li>
-          // Add more properties as needed
-        ))}
-      </ul>
-    ) : (
-      <p>No data available</p>
-    )}
-  </div>
+    <ContainerWrapper>
+      <Title>Property Details</Title>
+      {data.length > 0 ? (
+        <ul>
+          {data.map((item) => (
+            <li key={item.id}>
+              <strong>Property Address:</strong> {item['Property Address']}
+            </li>
+            // Add more properties as needed
+          ))}
+        </ul>
+      ) : (
+        <p>No data available</p>
+      )}
+    </ContainerWrapper>
   );
 }
 
