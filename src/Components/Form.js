@@ -61,7 +61,7 @@ export default function Form() {
             </FormControl>
 
             <Button type="submit" colorScheme="purple" width="full">
-              Login
+              Search
             </Button>
           </VStack>
         </form>
